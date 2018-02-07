@@ -12,7 +12,6 @@ namespace DatingApp.API.Data
         public DatingRepository(DataContext context)
         {
             _context = context;
-
         }
         public void Add<T>(T entity) where T : class
         {
