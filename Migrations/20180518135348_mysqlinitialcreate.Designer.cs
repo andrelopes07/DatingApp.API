@@ -11,13 +11,14 @@ using System;
 namespace DatingApp.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20180312180903_MessageEntityAdded")]
-    partial class MessageEntityAdded
+    [Migration("20180518135348_mysqlinitialcreate")]
+    partial class mysqlinitialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125");
 
             modelBuilder.Entity("DatingApp.API.Models.Like", b =>
